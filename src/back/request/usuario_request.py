@@ -27,10 +27,10 @@ def logout_user(header):
 
     return requisicao
 
-def login_user(header, user_login_dto):
+def login_user(user_login_dto):
     url = gera_url(ApiConsts.Base, UsuarioRotas.login)
     
-    requisicao = post(url=url, json = user_login_dto, headers=header)
+    requisicao = post(url=url, json = user_login_dto)
 
     return requisicao
 
